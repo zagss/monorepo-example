@@ -1,0 +1,19 @@
+{
+  "name": "@zagss/pkg-b",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "tsc index.ts --outDir dist --watch",
+    "build": "rimraf dist && tsc index.ts --outDir dist",
+    "prepublish": "pnpm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@zagss/pkg-a": "workspace:^"
+  }
+}
